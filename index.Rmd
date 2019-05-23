@@ -73,6 +73,7 @@ library(tidyverse)
 - Four realms and their interactions
 - You say you want a revolution
 - We all want to change the world
+- How to spend wisely & well
 
 # Psychology is the hardest science
 
@@ -372,12 +373,12 @@ plot(g, vertex.size=50, vertex.color="gray")
 
 ---
 
-$R$ (actions) create effects in the World ($W$)
-</br>
+Actions/responses ($R$) affect the World ($W$)
+</br></br>
 $W$ states induce sensations ($S$)
-</br>
+</br></br>
 $S$ affect $C$ (computations/cognitions)
-</br>
+</br></br>
 $C$ affect $A$
 
 ...
@@ -404,81 +405,6 @@ A dynamic and multi-scale system
 <img src="https://www.jsmf.org/apply/scholar-cs/cs.jpg"/>
 
 <https://www.jsmf.org/programs/cs/>
-
-# Take homes
-
----
-
-<img src="img/nested-causality.jpeg" height=500px/>
-
-<!-- Nested causality -->
-
----
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot(g, vertex.size=50, vertex.color="gray")
-```
-
----
-
-| Algorithms | Dynamics |
-|------------|----------|
-| for x in range(0, n): | $\dot{x}=f(x,a)$  |
-
-Different ways to characterize Black Boxes
-
----
-
-<img src="img/maunsell-hist-of-control.jpg" height=500px/>
-
-<small>
-[(Maunsell)](https://slideplayer.com/slide/4374326/)
-</small>
-
-<!-- History of cybernetics, how lost to cognitive science -->
-
----
-
-<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
-
----
-
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg"/>
-
-<small>
-[(Wang et al. 2012)](https://doi.org/10.1016/j.sysarc.2012.06.004)
-</small>
-
-<!-- Hierarchical control illustration -->
-
-<!-- --- -->
-
-<!-- Suggests an 'outside-in' approach to inquiry. Characterizing behaviors (or physiological states) where the perceptual control dynamics are well-enough known. -->
-<!-- Embrace multisensory flows. -->
-<!-- If we understand these dynamics sufficiently well, they will illuminate the $M$/$N$. Quote from Turvey & Shaw? -->
-
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
-</br>
-<small>
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
-</small>
-</div>
-
-## Complicate before simplifying?
-
----
-
-<img src="https://www.frontiersin.org/files/Articles/315952/fpls-08-02235-HTML/image_m/fpls-08-02235-g003.jpg" height=500px/>
-
-## And yet...
-
-1. An organism in some state of relative constancy ($\dot{B}<\epsilon$) is under the influence of one or more control systems.
-1. $\dot{B}=f(B,N,W)$
-1. For every $R_i$ ($\dot{B_i}$) there is some $S_i$ ($\dot{B_i}$ or $\dot{W_i}$)
-...
 
 # Our (essential) open science future
 
@@ -522,7 +448,9 @@ Different ways to characterize Black Boxes
 
 >"*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy…*"
 
+<small>
 <https://www.srcd.org/about-us/policy-scientific-integrity-transparency-and-openness>
+</small>
 
 ## Open science will accelerate discovery
 
@@ -531,13 +459,100 @@ Different ways to characterize Black Boxes
 - Video + physio + other temporally dense time series?
 - [Databrary.org](https://databrary.org)
 
-## An openly-shared 'behaviorome'
+<!-- ## An openly-shared 'behaviorome' -->
+
+<!-- --- -->
+
+<!-- ```{r, results='asis', echo=FALSE} -->
+<!-- write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE) -->
+<!-- ``` -->
+
+# Take homes
 
 ---
 
-```{r, results='asis', echo=FALSE}
-write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE)
+<img src="img/nested-causality.png" height=500px/>
+
+<!-- Nested causality -->
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+plot(g, vertex.size=50, vertex.color="gray")
 ```
+
+---
+
+| Algorithms | Dynamics |
+|------------|----------|
+| for x in range(0, n): | $\dot{x}=f(x,a)$  |
+
+Different ways to characterize Black Boxes
+
+---
+
+<img src="img/maunsell-hist-of-control.jpg" height=500px/>
+
+<small>
+[(Maunsell)](https://slideplayer.com/slide/4374326/)
+</small>
+
+<!-- History of cybernetics, how lost to cognitive science -->
+
+---
+
+<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
+
+<!-- --- -->
+
+<!-- <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg"/> -->
+
+<!-- <small> -->
+<!-- [(Wang et al. 2012)](https://doi.org/10.1016/j.sysarc.2012.06.004) -->
+<!-- </small> -->
+
+<!-- Hierarchical control illustration -->
+
+<!-- --- -->
+
+<!-- Suggests an 'outside-in' approach to inquiry. Characterizing behaviors (or physiological states) where the perceptual control dynamics are well-enough known. -->
+<!-- Embrace multisensory flows. -->
+<!-- If we understand these dynamics sufficiently well, they will illuminate the $M$/$N$. Quote from Turvey & Shaw? -->
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
+</br>
+<small>
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</small>
+</div>
+
+<!-- ## Complicate before simplifying? -->
+
+<!-- --- -->
+
+<!-- <img src="https://www.frontiersin.org/files/Articles/315952/fpls-08-02235-HTML/image_m/fpls-08-02235-g003.jpg" height=500px/> -->
+
+# How to spend wisely & well
+
+## Support research that
+
+- studies behavior (& internal states)
+- samples densely (and/or broadly) in time & space
+- creates meaningful linkages across levels of analysis
+- connects between & among systems
+
+---
+
+- exploits knowledge about nested feedback loops
+- moves beyond qualitative micro-theories
+- provides specifics about theorized algorithms or dynamics
+
+---
+
+- shares procedures, materials, code, & data openly
 
 ---
 
@@ -552,21 +567,6 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 
 <!-- Girl hugging elephant -->
 
-# How to spend wisely & well?
-
-## Support research that
-
-- studies behavior (& internal states)
-- acknowledges the risks of premature simplification
-- moves beyond qualitative micro-theories
-- samples densely (and/or broadly) in time & space
-
----
-
-- creates meaningful linkages across levels
-- exploits knowledge about nested feedback loops & dynamics
-- shares procedures, materials, code, & data openly
-
 # Thank you
 
 ---
@@ -574,10 +574,12 @@ write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/11987
 <video width="800" data-autoplay>
   <source src="https://github.com/gilmore-lab/DEVSEC-2018/blob/master/mov/databrary-splash.mp4?raw=true" type="video/mp4">
   </video>
+<small>
 rogilmore@psu.edu</br>
 <https://gilmore-lab.github.io></br>
 <https://gilmore-lab.github.io/2019-03-25-cne/></br>
 [\@rogilmore](https://twitter.com/rogilmore)
+</small>
 
 # Materials
 
