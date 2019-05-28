@@ -1,5 +1,5 @@
 ---
-title: "What's next in cognitive (neuro)science?"
+title: "Making cognitive (neuro)science even better"
 author: Rick O. Gilmore
 date: "`r Sys.time()`"
 bib: references.bib
@@ -80,9 +80,11 @@ logged_in <- databraryapi::login_db(params$db_id)
 
 - The hardest science
 - Why it's hard
-- How to respond
+- Making cognitive (neuro)science even better
 
 # Psychology is the hardest science
+
+## (Harder than physics)
 
 ---
 
@@ -109,7 +111,7 @@ logged_in <- databraryapi::login_db(params$db_id)
 
 <img src="img/nested-causality-labels.png" height=600px/>
 
-## Embedded realms
+## Logically separable embedded realms
 
 ---
 
@@ -156,14 +158,12 @@ $\dot{W} = f(W,B)$
 [Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
 </small>
 
-## But measure
-
 ---
 
-- Mental states $M$ **indirectly**
+- Measure mental states $M$ **indirectly**
 - Via $N$, $B$, $W$ (+ prior beliefs/knowledge)
 
-## Linear/open-loop causal chains
+## Linear/open-loop theoretical frameworks dominate 
 
 ---
 
@@ -184,6 +184,12 @@ B.F. Skinner
 
 ---
 
+<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
+
+Noam Chomsky
+
+---
+
 $Stimulus (S) \rightarrow Cognition (C) \rightarrow Response (R)$
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -195,9 +201,8 @@ plot(g2, vertex.size=50, vertex.color="gray")
 
 ---
 
-<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
-
-Noam Chomsky
+<!-- Michael Gazzaniga -->
+<img src="https://www.psych.ucsb.edu/sites/www.psych.ucsb.edu/files/styles/portrait-full/public/images/faculty/gazzaniga_02.jpg?itok=hkXryDw_" height=500px/>
 
 ---
 
@@ -210,12 +215,7 @@ g2$layout <- igraph::layout_in_circle
 plot(g2, vertex.size=50, vertex.color="gray")
 ```
 
----
-
-<!-- Michael Gazzaniga -->
-<img src="https://www.psych.ucsb.edu/sites/www.psych.ucsb.edu/files/styles/portrait-full/public/images/faculty/gazzaniga_02.jpg?itok=hkXryDw_" height=500px/>
-
-## vs. *closed-loop* causal chains
+## *Closed-loop* causal chains better reflect the underlying reality
 
 ---
 
@@ -238,9 +238,11 @@ $C$ affects $R$
 </br></br>
 ...repeat
 
+## Even when we know or fully control $W$, $S$, $C$, and $R$
+
 ---
 
-<img src="img/jonas-kording-2017.jpg"/>
+<img src="img/jonas-kording-2017.jpg" width=1000px/>
 
 <small>
 [Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
@@ -270,19 +272,21 @@ $C$ affects $R$
 [Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
 </small>
 
-## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
+## Computational algorithms are powerful
+
+## but neither omnipotent nor ubiquitous
 
 ---
 
-- How to regulate the speed of a steam engine?
-
----
-
-<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg" height=500px></a>
+<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg" height=600px></a>
 
 <small>
 <br>By Nicolás Pérez, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=195711">Link</a></p>
 </small>
+
+---
+
+- How to regulate the speed of a Watt-style steam engine?
 
 ---
 
@@ -299,9 +303,13 @@ $C$ affects $R$
 
 ---
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=500px></a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=600px></a></p>
 
-## *Biological* computing/cognition...
+## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
+
+- How much do we *really* understand about cognition/computing in physical entities we did not design and make?
+
+## *Biological* computing
 
 ---
 
@@ -319,11 +327,12 @@ $C$ affects $R$
 
 <!-- Biological computing... -->
 
-- Computes with chemistry (when possible), and 'wires' (when necessary)
+- Computes with chemistry (neurotransmitters, hormones) when possible
+- With 'wires' (axons & dendrites) when necessary
 
 ---
 
-<img src="https://images.gr-assets.com/books/1466902982l/23582015.jpg" height=500px/>
+<img src="https://images.gr-assets.com/books/1466902982l/23582015.jpg" height=600px/>
 
 <!-- Sterling and Laughlin -->
 
@@ -332,7 +341,7 @@ $C$ affects $R$
 <!-- Biological computing... -->
 
 - Engages in real-time behaviors with existential consequences (e.g., ingestion, defense, reproduction, locomotion, pursuit)
-- Interacts with and in dynamic environments
+- Operates effectively in complex, dynamic environments
 
 ---
 
@@ -342,31 +351,23 @@ $C$ affects $R$
 
 <!-- to live is to move, sense, compute, adapt... -->
 
----
+## Biological computing
 
-<!-- Biological computing... -->
+---
 
 - Separates neural 'streams' for $S \leftrightarrow C \leftrightarrow A$
 
 ---
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=500px/>
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=600px/>
 
 <small>
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+[Swanson 2005](http://dx.doi.org/10.1002/cne.20733)
 </small>
 </div>
 
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=500px/>
-
-<small>
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
-</small>
-</div>
+## Bigger, denser, more diverse data will help, but
 
 ## Big data (-omics) initiatives in the biological sciences...
 
@@ -377,7 +378,7 @@ $C$ affects $R$
 - [Metabolome](http://www.hmdb.ca/)
 - [Connectome](http://www.humanconnectomeproject.org/)
 
-## ...overlook or give short-shrift to behavior
+## Give short-shrift to behavior
 
 ---
 
@@ -423,24 +424,9 @@ $C$ affects $R$
 
 ---
 
-<div class="centered">
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr2.jpg" height=600px/>
+<img src="https://researchforevidence.fhi360.org/wp-content/uploads/2017/07/mastro-1200x800-768x512.png" height=600px/>
 
-<small>
-[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
-</small>
-</div>
-
----
-
-<div class="centered">
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr3.jpg" height=600px/>
-
-<small>
-[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
-</small>
-</div>
-
+<!-- Rigor Mortis book -->
 
 ## Is there a reproducibility crisis in science?
 
@@ -476,7 +462,7 @@ $C$ affects $R$
 <div class="notes">
 </div>
 
-# How to respond
+# Making cognitive (neuro)science even better
 
 ## Support research that
 
@@ -490,13 +476,20 @@ $C$ affects $R$
 
 ---
 
-- exploits knowledge about closed-loop causality
-- provides specifics about theorized algorithms and/or dynamics
+- attempts to close causal loops
+- specifies algorithms and/or dynamical processes
 
 ---
 
-- evidences commitment to rigorous, reproducible, and robust results
-- uses video as data & documentation
+- demonstrates a meaningful commitment to rigorous, reproducible, & robust findings
+
+---
+
+<img src="https://cdn-images-1.medium.com/max/638/1*SLh1zk2qoV_ud3nlwF4R8Q.png" height=600px/>
+
+## Support research that
+
+- collects & shares video as data & documentation
 
 ## Why video?
 
@@ -510,7 +503,7 @@ $C$ affects $R$
 - Captures (& preserves)
 - Shows (& helps tell...)
 - Expands the scope of inquiry
-- Provides opportunities for reuse
+- Provides unequaled opportunities for reuse
 
 ---
 
@@ -531,7 +524,7 @@ openly shared with the research community
 
 ## Support research that
 
-- Shares procedures, materials, code, & data openly
+- Shares procedures, materials, code, & data openly (but securely)
 
 ---
 
@@ -540,7 +533,7 @@ openly shared with the research community
 
 ---
 
-- Makes sharing & scripted, fully reproducible workflows easy
+- Makes sharing scripted, fully reproducible workflows easy
 
 ---
 
@@ -550,12 +543,6 @@ openly shared with the research community
 <small>
 [Tamis-LeMonda 2014](https://doi.org/10.17910/B7CC74)
 </small>
-
----
-
-```{r, echo=TRUE, include=TRUE}
-vol_8 <- databraryapi::download_session_csv(vol_id = 8)
-```
 
 ---
 
@@ -572,6 +559,7 @@ vol_8 %>%
 ---
 
 ```{r, include=TRUE}
+vol_8 <- databraryapi::download_session_csv(vol_id = 8)
 vol_8 %>%
   filter(participant.gender %in% c('Male', 'Female')) %>%
   ggplot() +
@@ -591,7 +579,7 @@ Python package
 
 ## Support research that
 
-- enables making linkages between & across data sets
+- enables linkages between & across data sets
 - exploits advances in AI and machine learning
 
 ---
