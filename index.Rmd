@@ -1,5 +1,5 @@
 ---
-title: "Investing wisely & well in the future of cognitive science"
+title: "What's next in cognitive (neuro)science?"
 author: Rick O. Gilmore
 date: "`r Sys.time()`"
 bib: references.bib
@@ -17,6 +17,8 @@ output:
       previewLinks: false
       center: true
       touch: true
+params:
+  db_id: rogilmore@psu.edu
 ---
 
 ```{r setup, include=FALSE}
@@ -35,8 +37,15 @@ if(!require(tidyverse)){
   install.packages('tidyverse')
 }
 library(tidyverse)
-```
 
+if(!require(igraph)){
+   install.packages('igraph')
+}
+library(igraph)
+
+# Log-in to Databrary
+logged_in <- databraryapi::login_db(params$db_id)
+```
 
 # Preliminaries
 
@@ -69,11 +78,9 @@ library(tidyverse)
 
 ## Overview
 
-- Psychology is the hardest science
-- Four realms and their interactions
-- You say you want a revolution
-- We all want to change the world
-- How to spend wisely & well
+- The hardest science
+- Why it's hard
+- How to respond
 
 # Psychology is the hardest science
 
@@ -85,7 +92,7 @@ library(tidyverse)
 
 <img src="img/psych-harder-2.jpg" height=500px/>
 
-## But why?
+# Why it's hard
 
 ---
 
@@ -98,51 +105,281 @@ library(tidyverse)
 <p><a href="https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg#/media/File:Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_(Vienna)_-_Google_Art_Project.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg/1200px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_%28Vienna%29_-_Google_Art_Project.jpg" alt="Pieter Bruegel the Elder - The Tower of Babel (Vienna) - Google Art Project.jpg" height=500px></a>
 </p>
 
-<!-- Field has become highly specialized and communication across subfields has become difficult -->
+---
 
-<!-- --- -->
+<img src="img/nested-causality-labels.png" height=600px/>
 
-<!-- <img src="https://cdn.vox-cdn.com/thumbor/38cL6UkWMphRIxPGCjYjjf4swcU=/23x0:1864x1381/920x613/filters:focal(23x0:1864x1381):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/46249310/541530203.0.0.jpg" height=600px/> -->
-
-<!-- --- -->
-
-<!-- ## The 'Rumsfeldian' space of knowledge -->
-
-<!-- | | | -->
-<!-- |------------------|------------------| -->
-<!-- | known-knowns | known-unknowns | -->
-<!-- | unknown-knowns | unknown-unknowns | -->
-
-<!-- ## The 'Rumsfeldian' space of knowledge -->
-
-<!-- | | | -->
-<!-- |------------------|------------------| -->
-<!-- | known-knowns | known-unknowns | -->
-<!-- | **unknown-knowns** | unknown-unknowns | -->
-
-<!-- --- -->
-
-<!-- <img src="https://cdn-images-1.medium.com/max/800/1*Nv4oqbfv5IwRSMdLGtFZuA.gif"/> -->
-
-<!-- <!-- - What does psychology aim to understand? -->
+## Embedded realms
 
 ---
 
-<img src="img/psychology-definition.jpg">
+| Realm               | Domain               |
+|---------------------|----------------------|
+| $W$   | The world |
+| $B$   | The body |
+| $N$   | The nervous system |
+| $M$   | The mind |
 
-<!-- Definition of psychology -->
 
-## Oh give me a 'ome...
+---
+
+- Body ($B$) within world ($W$)
+- Nervous system ($N$) within body ($B$)
+- Mind ($M$) within nervous system ($N$)
+
+## Mutually coupled dynamic states
+
+---
+
+$\dot{M} = f(M,N)$
+
+$\dot{N} = f(N,B)$
+
+$\dot{B} = f(B,N,W)$
+
+$\dot{W} = f(W,B)$
+
+## Measure
+
+---
+
+- $W$, $B$, $N$ **directly**
+- Across multiple spatial & temporal scales
+
+---
+
+<a href="">
+<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
+</a>
+
+<small>
+[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
+</small>
+
+## But measure
+
+---
+
+- Mental states $M$ **indirectly**
+- Via $N$, $B$, $W$ (+ prior beliefs/knowledge)
+
+## Linear/open-loop causal chains
+
+---
+
+$Stimulus (S) \rightarrow Response (R)$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+el1 <- rbind(c("S","R"))
+g1 <- igraph::graph_from_edgelist(el1)
+g1$layout <- igraph::layout_in_circle
+plot(g1, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
+
+B.F. Skinner
+
+---
+
+$Stimulus (S) \rightarrow Cognition (C) \rightarrow Response (R)$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+el2 <- rbind(c("S","C"), c("C", "R"))
+g2 <- igraph::graph_from_edgelist(el2)
+g2$layout <- igraph::layout_in_circle
+plot(g2, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
+
+Noam Chomsky
+
+---
+
+$S \rightarrow N \leftrightarrow C \rightarrow R$
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+el2 <- rbind(c("S","N"), c("N", "C"), c("C", "N"), c("C", "R"))
+g2 <- igraph::graph_from_edgelist(el2)
+g2$layout <- igraph::layout_in_circle
+plot(g2, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+<!-- Michael Gazzaniga -->
+<img src="https://www.psych.ucsb.edu/sites/www.psych.ucsb.edu/files/styles/portrait-full/public/images/faculty/gazzaniga_02.jpg?itok=hkXryDw_" height=500px/>
+
+## vs. *closed-loop* causal chains
+
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+el <- rbind(c("C","R"), c("R","W"), c("W","S"), c("S","C"))
+g <- igraph::graph_from_edgelist(el)
+g$layout <- igraph::layout_in_circle
+plot(g, vertex.size=50, vertex.color="gray")
+```
+
+---
+
+Responses ($R$) affect the World ($W$)
+</br></br>
+$W$ states create stimuli ($S$)
+</br></br>
+$S$ affect $C$ (cognition)
+</br></br>
+$C$ affects $R$
+</br></br>
+...repeat
+
+---
+
+<img src="img/jonas-kording-2017.jpg"/>
+
+<small>
+[Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
+</small>
+
+---
+
+>"*We show that [classic analytic neuroscience] approaches reveal interesting structure in the data...*"
+
+<small>
+[Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
+</small>
+
+---
+
+>"*...but do not meaningfully describe the hierarchy of information processing in the microprocessor.*" 
+
+<small>
+[Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
+</small>
+
+---
+
+>"*This suggests current analytic approaches in neuroscience may fall short of producing meaningful understanding of neural systems, regardless of the amount of data.*"
+
+<small>
+[Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
+</small>
+
+## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
+
+---
+
+- How to regulate the speed of a steam engine?
+
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg#/media/File:Maquina_vapor_Watt_ETSIIM.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Maquina_vapor_Watt_ETSIIM.jpg" alt="Maquina vapor Watt ETSIIM.jpg" height=500px></a>
+
+<small>
+<br>By Nicolás Pérez, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=195711">Link</a></p>
+</small>
+
+---
+
+```
+1. Measure the speed of the flywheel.
+2. Compare the actual speed against the desired speed.
+3. If there is no discrepancy, return to step 1. Otherwise,
+    a. measure the current steam pressure;
+    b. calculate the desired alteration in steam pressure;
+    c. calculate the necessary throttle valve adjustment.
+4. Make the throttle valve adjustment.
+5. Return to step 1. 
+```
+
+---
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Centrifugal_governor.png#/media/File:Centrifugal_governor.png"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Centrifugal_governor.png" alt="Centrifugal governor.png" height=500px></a></p>
+
+## *Biological* computing/cognition...
+
+---
+
+- Constrained by space, time, energy
+
+---
+
+<img src="https://images.newscientist.com/wp-content/uploads/2017/05/23120156/rexfeatures_8828108ac1-800x533.jpg" height=500px/>
+
+25 W vs. ?? MW
+
+<!-- Alpha Go vs. Ke Jie -->
+
+---
+
+<!-- Biological computing... -->
+
+- Computes with chemistry (when possible), and 'wires' (when necessary)
+
+---
+
+<img src="https://images.gr-assets.com/books/1466902982l/23582015.jpg" height=500px/>
+
+<!-- Sterling and Laughlin -->
+
+---
+
+<!-- Biological computing... -->
+
+- Engages in real-time behaviors with existential consequences (e.g., ingestion, defense, reproduction, locomotion, pursuit)
+- Interacts with and in dynamic environments
+
+---
+
+<iframe width="800" height="600" src="https://www.youtube.com/embed/9nxoSRasq2Q" frameborder="0" allow="accelerometer; data-autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- Video of Euglena in locomotion -->
+
+<!-- to live is to move, sense, compute, adapt... -->
+
+---
+
+<!-- Biological computing... -->
+
+- Separates neural 'streams' for $S \leftrightarrow C \leftrightarrow A$
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=500px/>
+
+<small>
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</small>
+</div>
+
+---
+
+<div class="centered">
+<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-3.jpg" height=500px/>
+
+<small>
+[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
+</small>
+</div>
+
+## Big data (-omics) initiatives in the biological sciences
+
+---
 
 - [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
 - [Proteome](https://hupo.org/human-proteome-project)
 - [Metabolome](http://www.hmdb.ca/)
 - [Connectome](http://www.humanconnectomeproject.org/)
-- Behaviorome?
 
 ---
 
->"*Behavior is the linchpin of the most vexing problems in public health, and a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*"
+>"*Behavior is the linchpin of the most vexing problems in public health...*"
 
 <small>
 [Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
@@ -156,259 +393,56 @@ library(tidyverse)
 [Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
 </small>
 
-# 4 realms and their interactions
+---
+
+>"*...a better understanding of behavior is fundamental to achieving positive health outcomes, from prenatal development throughout adulthood.*"
+
+<small>
+[Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
+</small>
 
 ---
 
-<img src="img/nested-causality.png" height=600px/>
-
----
-
-| Realm               | Domain               |
-|---------------------|----------------------|
-| $W$   | The world |
-| $B$   | The body |
-| $N$   | The nervous system |
-| $M$   | The mind |
-
-## Nested causality
-
-- Mind ($M$) within nervous system ($N$)
-- Nervous system ($N$) within body ($N$)
-- Body ($B$) within world ($W$)
-
-## Mutual coupling of dynamic states
-
-$\dot{M} = f(M,N)$
-
-$\dot{N} = f(N,B)$
-
-$\dot{B} = f(B,N,W)$
-
-$\dot{W} = f(W,B)$
-
-## Measure
-
-- $W$, $B$, $N$ **directly**
-- At varied spatial & temporal scales
-
----
-
-<a href="">
-<img src="https://media.nature.com/lw926/nature-assets/neuro/journal/v17/n11/images/nn.3839-F1.jpg" height=500px/>
+<a href="https://doi.org/10.1016/j.neuron.2016.12.041">
+<img src="img/krakauer.jpg" height=600px/>
 </a>
 
-<small>
-[Sejnowski, Churchland, & Movshon, 2014](http://doi.org/10.1038/nn.3839)
-</small>
-
-## Measure
-
-- $M$ **indirectly**
-- Only via $N$, $B$
-
-## $M$ highly salient, but...
+<!-- Krakauer paper title -->
 
 ---
 
-<img src="https://static.boredpanda.com/blog/wp-content/uploads/2018/07/arctic-fox-rescued-iceberg-canada-harrigan-russell-1-5b39d097f2b83__700.jpg" height=600px/>
-
-<!-- Fox on an iceberg. Like iceberg, belies bulk below. -->
-
----
-
-<p><a href="https://commons.wikimedia.org/wiki/File:Blackbox3D-withGraphs.png#/media/File:Blackbox3D-withGraphs.png"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Blackbox3D-withGraphs.png" alt="Blackbox3D-withGraphs.png" height=600px></a><br>By <a href="//commons.wikimedia.org/wiki/User:Krauss" title="User:Krauss">Krauss</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=45608217">Link</a></p>
-
----
-
-> "*How should an experimenter proceed when faced with a black box?*"
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg" height=600px/>
 
 <small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2
+[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
 </small>
+</div>
 
 ---
 
-<img src="https://images-na.ssl-images-amazon.com/images/I/41Pe93nMvcL._SX331_BO1,204,203,200_.jpg" height=600px/>
-
----
-
-> "*What properties of the Box's contents are discoverable and what are fundamentally not discoverable?*"
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr2.jpg" height=600px/>
 
 <small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2
+[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
 </small>
+</div>
 
 ---
 
-> "*What methods should be used if the Box is to be investigated efficiently?*"
+<div class="centered">
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr3.jpg" height=600px/>
 
 <small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/2
+[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
 </small>
+</div>
 
----
-
-> "*The primary data of any investigation of a Black Box consists of a sequence of values of the vector with two components: (input state, output state).*"
-
-<small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
-</small>
-
----
-
-> "*...all fundamental knowledge obtainable from a Black Box...is such as can be obtained by re-coding the protocol [sequence of input/output measurements].*"
-
-<small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/5
-</small>
-
----
-
-> "*The theory of the Black Box is simply the study of the relations between the experimenter and his environment, when special attention is given to the flow of information.*"
-
-<small>
-[Ashby, 1956/2015](https://www.amazon.com/Introduction-Cybernetics-W-Ross-Ashby/dp/1614277656), 6/18
-</small>
-
-# You say you want a revolution...
-
----
-
-<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
-
-<small>
-B.F. Skinner
-</small>
-
-## $S \rightarrow R$ psychology
-
-- $S$ (stimulus) -> $R$ (response)
-- $S$ and $R$ observable
-
----
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-library(igraph)
-el <- rbind(c("W","S"), c("S","B"), c("B","R"), c("R","W"))
-g0 <- graph_from_edgelist(el)
-g0$layout <- layout_in_circle
-plot(g0, vertex.size=50, vertex.color="gray")
-```
-
----
-
-- $S$ is the effect of some $W_i$ on $B$
-- $R$ is some change in $B$ ($\dot{B_i}$) that is observable in $W$
-    
----
-
-<img src="https://theintercept.imgix.net/wp-uploads/sites/1/2018/09/American-Dissident-Noam-Chomsky-on-the-State-of-the-Empire-1537928785.jpg?auto=compress%2Cformat&q=90&fit=crop&w=1440&h=720"/>
-
-<small>
-Noam Chomsky
-</small>
-
-## $S \rightarrow C \rightarrow R$
-
-- $S$ (stimulus) -> $C$ (cognition/computation) -> $R$ (response)
-- $C$ inferred from structure in $S$->$R$
-- $C$ elaborate, probably innate
-- $S$ alone insufficient to explain $C$, especially language [(Chomsky, 1959)](http://cogprints.org/1148/1/chomsky.htm)
-
-## The cognitive 'revolution'
-
-- $C$ ($M$) viewed in *algorithmic* terms
-- Formal operations on information structures
-- Developed in parallel with computer science, AI
-
----
-
-<!-- Michael Gazzaniga -->
-<img src="https://www.psych.ucsb.edu/sites/www.psych.ucsb.edu/files/styles/portrait-full/public/images/faculty/gazzaniga_02.jpg?itok=hkXryDw_" height=500px/>
-
-<small>
-Michael Gazzaniga
-</small>
-
-## The cognitive (neuroscience) 'revolution'
-
-- Developed alongside cognitive science
-- $C (M) \leftrightarrow N$
-- What $N_i$ compute functions of $C (M)$?
-- Assume 1:1 relationship between $N$ and $C (M)$
-
----
-
-<img src="https://images-na.ssl-images-amazon.com/images/I/51I9BK4XmzL._SX326_BO1,204,203,200_.jpg" height=600px/>
-
-<!-- Fodor's Modularity of Mind -->
-
----
-
-<img src="https://i.pinimg.com/474x/4c/4d/b9/4c4db91517dc41660d2b44aa3f10eab5--phrenology-drawings-of.jpg" height=600/>
-
-<!-- Phrenology -->
-
-## The problem with revolutions...
-
-<img src="https://www.theparisreview.org/blog/wp-content/uploads/2018/04/576cb32f05aae_louisette.jpg" height=500px/>
-
-<!-- "Is that something is always lost..." -->
-
-## Linear/open-loop causal chains
-
-- $S \rightarrow R$ 
-- $S \rightarrow C \rightarrow R$
-
-## vs. *closed-loop* causal chains
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-#library(igraph)
-el <- rbind(c("C","R"), c("R","W"), c("W","S"), c("S","C"))
-g <- graph_from_edgelist(el)
-g$layout <- layout_in_circle
-plot(g, vertex.size=50, vertex.color="gray")
-```
-
----
-
-Actions/responses ($R$) affect the World ($W$)
-</br></br>
-$W$ states induce sensations ($S$)
-</br></br>
-$S$ affect $C$ (computations/cognitions)
-</br></br>
-$C$ affect $A$
-
-...
-
-## Consequences...
-
-- Properties of $W$ downplayed, ignored
-- Why are $S$ or $C$ causal but not $R$?
-- *Variability* in behavior $R$ only noise
-- *Origins* of $R$, $C$, $A$?
-- $W \leftrightarrow B \leftrightarrow N$ reflect ontogenetic and phylogenetic history
-
----
-
-<!-- <img src="https://jlwatsonconsulting.typepad.com/.a/6a0133f49a611c970b01b7c7870903970b-popup"/> -->
-<img src="https://www.ashevillefm.org/wp-content/uploads/2017/04/BabyBathwater-300x247.jpg" height=400px/>
-
-## In fact, human cognition is...
-
----
-
-A dynamic and multi-scale system
-
-<img src="https://www.jsmf.org/apply/scholar-cs/cs.jpg"/>
-
-<https://www.jsmf.org/programs/cs/>
-
-# Our (essential) open science future
 
 ## Is there a reproducibility crisis in science?
+
+---
 
 - Yes, a significant crisis
 - Yes, a slight crisis
@@ -421,7 +455,7 @@ A dynamic and multi-scale system
 <img src="http://www.nature.com/polopoly_fs/7.36716.1469695923!/image/reproducibility-graphic-online1.jpeg_gen/derivatives/landscape_630/reproducibility-graphic-online1.jpeg" height=600px>
 </br>
 <small>
-([Baker, 2016](http://doi.org/10.1038/533452a))
+[Baker, 2016](http://doi.org/10.1038/533452a)
 </small>
 </div>
 
@@ -432,127 +466,73 @@ A dynamic and multi-scale system
 <div class="centered">
 <img src="http://www.nature.com/polopoly_fs/7.36718.1464174471!/image/reproducibility-graphic-online3.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online3.jpg"" width=700px>
 </br>
-<small>([Baker, 2016](http://doi.org/10.1038/533452a))</small>
+<small>
+[Baker, 2016](http://doi.org/10.1038/533452a)
+</small>
 </div>
 
 <div class="notes">
 </div>
 
-## Why this matters
-
----
-
->"*The advancement of detailed and diverse knowledge about the development of the world’s children is essential for improving the health and well-being of humanity…*"
-
----
-
->"*We regard scientific integrity, transparency, and openness as essential for the conduct of research and its application to practice and policy…*"
-
-<small>
-<https://www.srcd.org/about-us/policy-scientific-integrity-transparency-and-openness>
-</small>
-
-## Open science will accelerate discovery
-
-- Open sharing of materials, analysis code, & data
-- Causal/dynamic models in discoverable formats
-- Video + physio + other temporally dense time series?
-- [Databrary.org](https://databrary.org)
-
-<!-- ## An openly-shared 'behaviorome' -->
-
-<!-- --- -->
-
-<!-- ```{r, results='asis', echo=FALSE} -->
-<!-- write_video_clip_html("https://nyu.databrary.org/slot/27087/0,372193/asset/119877/download?inline=true", vid_w_pix = 640, vid_h_pix = 480, show_link = FALSE) -->
-<!-- ``` -->
-
-# Take homes
-
----
-
-<img src="img/nested-causality.png" height=500px/>
-
-<!-- Nested causality -->
-
----
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-plot(g, vertex.size=50, vertex.color="gray")
-```
-
----
-
-| Algorithms | Dynamics |
-|------------|----------|
-| for x in range(0, n): | $\dot{x}=f(x,a)$  |
-
-Different ways to characterize Black Boxes
-
----
-
-<img src="img/maunsell-hist-of-control.jpg" height=500px/>
-
-<small>
-[(Maunsell)](https://slideplayer.com/slide/4374326/)
-</small>
-
-<!-- History of cybernetics, how lost to cognitive science -->
-
----
-
-<img src="https://thepsychologist.bps.org.uk/sites/thepsychologist.bps.org.uk/files/mansell.jpg" height=500px/>
-
-<!-- --- -->
-
-<!-- <img src="https://ars.els-cdn.com/content/image/1-s2.0-S1383762112000586-gr1.jpg"/> -->
-
-<!-- <small> -->
-<!-- [(Wang et al. 2012)](https://doi.org/10.1016/j.sysarc.2012.06.004) -->
-<!-- </small> -->
-
-<!-- Hierarchical control illustration -->
-
-<!-- --- -->
-
-<!-- Suggests an 'outside-in' approach to inquiry. Characterizing behaviors (or physiological states) where the perceptual control dynamics are well-enough known. -->
-<!-- Embrace multisensory flows. -->
-<!-- If we understand these dynamics sufficiently well, they will illuminate the $M$/$N$. Quote from Turvey & Shaw? -->
-
----
-
-<div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=450px/>
-</br>
-<small>
-[Swanson, 2005](http://dx.doi.org/10.1002/cne.20733)
-</small>
-</div>
-
-<!-- ## Complicate before simplifying? -->
-
-<!-- --- -->
-
-<!-- <img src="https://www.frontiersin.org/files/Articles/315952/fpls-08-02235-HTML/image_m/fpls-08-02235-g003.jpg" height=500px/> -->
-
-# How to spend wisely & well
+# How to respond
 
 ## Support research that
 
-- studies behavior (& internal states)
+---
+
+- studies *behavior* (& internal states)
+
+---
+
 - samples densely (and/or broadly) in time & space
 - creates meaningful linkages across levels of analysis
-- connects between & among systems
+- connects between & among systems/domains
 
 ---
 
 - exploits knowledge about nested feedback loops
-- moves beyond qualitative micro-theories
-- provides specifics about theorized algorithms or dynamics
+- provides specifics about theorized algorithms and/or dynamics
+
+---
+
+- evidences commitment to rigorous, reproducible, and robust results
+- uses video as data & documentation
+
+
 
 ---
 
 - shares procedures, materials, code, & data openly
+
+---
+
+- exploits advances in AI and machine learning
+
+---
+
+<video width="700" data-autoplay>
+  <source src="https://nyu.databrary.org/slot/27087/0,79000/asset/119877/download?inline=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+---
+
+$n=900$ 12-, 18-, 24-mo-olds; $n=30$ sites
+</br></br>
+demographics, health, vocabulary, media use, & temperament
+</br></br>
+openly shared with the research community
+
+---
+
+<video height="600" data-controls data-autoplay>
+  <source src="mov/ossmy-openpose.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<small>*Source*: Ori Ossmy (NYU)</small>
+
+## If we do this...
 
 ---
 
@@ -577,7 +557,7 @@ Different ways to characterize Black Boxes
 <small>
 rogilmore@psu.edu</br>
 <https://gilmore-lab.github.io></br>
-<https://gilmore-lab.github.io/2019-03-25-cne/></br>
+<https://gilmore-lab.github.io/2019-06-03-McDonnell-Fdn/></br>
 [\@rogilmore](https://twitter.com/rogilmore)
 </small>
 
@@ -585,6 +565,7 @@ rogilmore@psu.edu</br>
 
 ---
 
+<small>
 This talk was produced on `r Sys.Date()` in [RStudio](http://rstudio.com) version using R Markdown and the reveal.JS framework.
 The code and materials used to generate the slides may be found at <https://github.com/gilmore-lab/2019-06-03-McDonnell-Fdn/>.
 Information about the R Session that produced the code is as follows:
@@ -594,3 +575,11 @@ Information about the R Session that produced the code is as follows:
 ```{r session-info}
 sessionInfo()
 ```
+
+```{r include=FALSE}
+# if (logged_in){
+#   databraryapi::logout_db()  
+# }
+```
+
+</small>

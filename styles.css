@@ -2,6 +2,10 @@
   font-size: 1.5em;
 }
 
+.reveal section th, tr, td {
+  font-size: 2.0em;
+}
+
 .reveal section li {
   font-size: 1.5em;
 }
