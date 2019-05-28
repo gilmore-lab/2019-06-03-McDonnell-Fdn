@@ -22,7 +22,7 @@ params:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, cache=TRUE)
 source('R/write_video_clip_html.R')
 
 if(!require(databraryapi)){
@@ -52,7 +52,7 @@ logged_in <- databraryapi::login_db(params$db_id)
 ---
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/NSF_Logo.PNG" height=150px>
-<img src="https://science.nichd.nih.gov/confluence/download/attachments/34472103/NICHD-vertical-2-color.png?version=1&modificationDate=1477410070000&api=v2" height=150px>
+<img src="https://pbs.twimg.com/profile_images/826768222363975680/8hO9VaFD.jpg" height=150px>
 </br>
 <img src="https://sloan.org/storage/app/media/Logos/Sloan-Logo-stacked-black-web.png" height=150px>
 <img src="http://newsroom.unl.edu/announce/files/file77330.jpg" height=150px/>
@@ -368,7 +368,7 @@ $C$ affects $R$
 </small>
 </div>
 
-## Big data (-omics) initiatives in the biological sciences
+## Big data (-omics) initiatives in the biological sciences...
 
 ---
 
@@ -376,6 +376,8 @@ $C$ affects $R$
 - [Proteome](https://hupo.org/human-proteome-project)
 - [Metabolome](http://www.hmdb.ca/)
 - [Connectome](http://www.humanconnectomeproject.org/)
+
+## ...overlook or give short-shrift to behavior
 
 ---
 
@@ -478,9 +480,7 @@ $C$ affects $R$
 
 ## Support research that
 
----
-
-- studies *behavior* (& internal states)
+- studies *behavior* (& accompanying internal states)
 
 ---
 
@@ -490,7 +490,7 @@ $C$ affects $R$
 
 ---
 
-- exploits knowledge about nested feedback loops
+- exploits knowledge about closed-loop causality
 - provides specifics about theorized algorithms and/or dynamics
 
 ---
@@ -498,15 +498,19 @@ $C$ affects $R$
 - evidences commitment to rigorous, reproducible, and robust results
 - uses video as data & documentation
 
-
-
----
-
-- shares procedures, materials, code, & data openly
+## Why video?
 
 ---
 
-- exploits advances in AI and machine learning
+<iframe src="https://www.apa.org/science/about/psa/2017/10/video-data" height=600px width=800px>
+</iframe>
+
+## Video...
+
+- Captures (& preserves)
+- Shows (& helps tell...)
+- Expands the scope of inquiry
+- Provides opportunities for reuse
 
 ---
 
@@ -525,14 +529,81 @@ openly shared with the research community
 
 ---
 
+## Support research that
+
+- Shares procedures, materials, code, & data openly
+
+---
+
+<iframe src="https://play-behaviorome.github.io/PLAY-project.org/" height=600 width=800>
+</iframe>
+
+---
+
+- Makes sharing & scripted, fully reproducible workflows easy
+
+---
+
+<iframe src="https://doi.org/10.17910/B7CC74" height=600 width=800>
+</iframe>
+
+<small>
+[Tamis-LeMonda 2014](https://doi.org/10.17910/B7CC74)
+</small>
+
+---
+
+```{r, echo=TRUE, include=TRUE}
+vol_8 <- databraryapi::download_session_csv(vol_id = 8)
+```
+
+---
+
+```
+vol_8 <- databraryapi::download_session_csv(vol_id = 8)
+vol_8 %>%
+  filter(participant.gender %in% c('Male', 'Female')) %>%
+  ggplot() +
+  aes(x = participant.race, fill = participant.race) +
+  facet_grid(. ~ participant.gender) +
+  geom_bar(stat="count") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+---
+
+```{r, include=TRUE}
+vol_8 %>%
+  filter(participant.gender %in% c('Male', 'Female')) %>%
+  ggplot() +
+  aes(x = participant.race, fill = participant.race) +
+  facet_grid(. ~ participant.gender) +
+  geom_bar(stat="count") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+---
+
+R package </br>
+<https://github.com/PLAY-behaviorome/databraryapi>
+
+Python package
+<https://github.com/PLAY-behaviorome/databrarypi>
+
+## Support research that
+
+- enables making linkages between & across data sets
+- exploits advances in AI and machine learning
+
+---
+
 <video height="600" data-controls data-autoplay>
   <source src="mov/ossmy-openpose.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-<small>*Source*: Ori Ossmy (NYU)</small>
+<small>Source: Ori Ossmy, NYU</small>
 
-## If we do this...
+## If we do these things...
 
 ---
 
