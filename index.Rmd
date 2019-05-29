@@ -1,5 +1,5 @@
 ---
-title: "Making cognitive (neuro)science even better"
+title: "Making cognitive science even better"
 author: Rick O. Gilmore
 date: "`r Sys.time()`"
 bib: references.bib
@@ -111,17 +111,7 @@ logged_in <- databraryapi::login_db(params$db_id)
 
 <img src="img/nested-causality-labels.png" height=600px/>
 
-## Logically separable embedded realms
-
----
-
-| Realm               | Domain               |
-|---------------------|----------------------|
-| $W$   | The world |
-| $B$   | The body |
-| $N$   | The nervous system |
-| $M$   | The mind |
-
+## Logically separable, but embedded realms
 
 ---
 
@@ -145,7 +135,7 @@ $\dot{W} = f(W,B)$
 
 ---
 
-- $W$, $B$, $N$ **directly**
+- $W$, $B$, $N$ more or less **directly**
 - Across multiple spatial & temporal scales
 
 ---
@@ -167,20 +157,20 @@ $\dot{W} = f(W,B)$
 
 ---
 
+<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
+
+B.F. Skinner
+
+---
+
 $Stimulus (S) \rightarrow Response (R)$
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-el1 <- rbind(c("S","R"))
+el1 <- rbind(c("W", "S"), c("S","R"))
 g1 <- igraph::graph_from_edgelist(el1)
 g1$layout <- igraph::layout_in_circle
 plot(g1, vertex.size=50, vertex.color="gray")
 ```
-
----
-
-<img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE5NTU2MzE2MzcxNTg0NTIz/bf-skinner-9485671-1-402.jpg" height=500px/>
-
-B.F. Skinner
 
 ---
 
@@ -193,10 +183,10 @@ Noam Chomsky
 $Stimulus (S) \rightarrow Cognition (C) \rightarrow Response (R)$
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-el2 <- rbind(c("S","C"), c("C", "R"))
+el2 <- rbind(c("W", "S"), c("S","C"), c("C", "R"))
 g2 <- igraph::graph_from_edgelist(el2)
 g2$layout <- igraph::layout_in_circle
-plot(g2, vertex.size=50, vertex.color="gray")
+plot(g2, vertex.size=80, vertex.color="gray", edge.color = "blue")
 ```
 
 ---
@@ -209,10 +199,10 @@ plot(g2, vertex.size=50, vertex.color="gray")
 $S \rightarrow N \leftrightarrow C \rightarrow R$
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
-el2 <- rbind(c("S","N"), c("N", "C"), c("C", "N"), c("C", "R"))
+el2 <- rbind(c("W", "S"), c("S","C"), c("N", "C"), c("C", "N"), c("C", "R"))
 g2 <- igraph::graph_from_edgelist(el2)
 g2$layout <- igraph::layout_in_circle
-plot(g2, vertex.size=50, vertex.color="gray")
+plot(g2, vertex.size=80, vertex.color="gray", edge.color = "blue")
 ```
 
 ## *Closed-loop* causal chains better reflect the underlying reality
@@ -223,7 +213,7 @@ plot(g2, vertex.size=50, vertex.color="gray")
 el <- rbind(c("C","R"), c("R","W"), c("W","S"), c("S","C"))
 g <- igraph::graph_from_edgelist(el)
 g$layout <- igraph::layout_in_circle
-plot(g, vertex.size=50, vertex.color="gray")
+plot(g, vertex.size=80, vertex.color="gray", edge.color = "blue")
 ```
 
 ---
@@ -236,9 +226,9 @@ $S$ affect $C$ (cognition)
 </br></br>
 $C$ affects $R$
 </br></br>
-...repeat
+(...repeat)
 
-## Even when we know or fully control $W$, $S$, $C$, and $R$
+## Even when $W$, $S$, $C$, and $R$ are completely known
 
 ---
 
@@ -272,9 +262,7 @@ $C$ affects $R$
 [Jonas & Kording 2017](https://doi.org/10.1371/journal.pcbi.1005268)
 </small>
 
-## Computational algorithms are powerful
-
-## but neither omnipotent nor ubiquitous
+## Computational algorithms are powerful, but
 
 ---
 
@@ -307,7 +295,10 @@ $C$ affects $R$
 
 ## Algorithms vs. Dynamics ([Van Gelder, 1995](http://dx.doi.org/10.2307/2941061))
 
-- How much do we *really* understand about cognition/computing in physical entities we did not design and make?
+---
+
+- "If all you have is a hammer, everything looks like a nail." (Maslow)
+- How much do we *really* understand about biological computing? 
 
 ## *Biological* computing
 
@@ -336,12 +327,13 @@ $C$ affects $R$
 
 <!-- Sterling and Laughlin -->
 
----
+## *Biological* computing
 
-<!-- Biological computing... -->
+---
 
 - Engages in real-time behaviors with existential consequences (e.g., ingestion, defense, reproduction, locomotion, pursuit)
 - Operates effectively in complex, dynamic environments
+- Operates in single cells to aggregates of quadrillions...
 
 ---
 
@@ -351,34 +343,54 @@ $C$ affects $R$
 
 <!-- to live is to move, sense, compute, adapt... -->
 
-## Biological computing
+<!-- ## Biological computing -->
+
+<!-- --- -->
+
+<!-- - Separates neural 'streams' for $S \leftrightarrow C \leftrightarrow A$ -->
+
+<!-- --- -->
+
+<!-- <div class="centered"> -->
+<!-- <img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=600px/> -->
+
+<!-- <small> -->
+<!-- [Swanson 2005](http://dx.doi.org/10.1002/cne.20733) -->
+<!-- </small> -->
+<!-- </div> -->
+
+<!-- ## Bigger, denser, more diverse data will help, but -->
+
+<!-- ## Big data (-omics) initiatives in the biological sciences... -->
+
+<!-- --- -->
+
+<!-- - [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/) -->
+<!-- - [Proteome](https://hupo.org/human-proteome-project) -->
+<!-- - [Metabolome](http://www.hmdb.ca/) -->
+<!-- - [Connectome](http://www.humanconnectomeproject.org/) -->
+
+## To live is to move, sense, compute, adapt...
+
+## And yet big data (-omics) approaches to other questions in biomedicine largely overlook *behavior*
 
 ---
 
-- Separates neural 'streams' for $S \leftrightarrow C \leftrightarrow A$
+<a href="https://doi.org/10.1016/j.neuron.2016.12.041">
+<img src="img/krakauer.jpg" height=600px/>
+</a>
+
+<!-- Krakauer paper title -->
 
 ---
 
 <div class="centered">
-<img src="https://raw.githubusercontent.com/psu-psychology/psy-511-scan-fdns-2017/master/lectures/img/swanson-2005-fig-1.jpg" height=600px/>
+<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg" height=600px/>
 
 <small>
-[Swanson 2005](http://dx.doi.org/10.1002/cne.20733)
+[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
 </small>
 </div>
-
-## Bigger, denser, more diverse data will help, but
-
-## Big data (-omics) initiatives in the biological sciences...
-
----
-
-- [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
-- [Proteome](https://hupo.org/human-proteome-project)
-- [Metabolome](http://www.hmdb.ca/)
-- [Connectome](http://www.humanconnectomeproject.org/)
-
-## Give short-shrift to behavior
 
 ---
 
@@ -403,24 +415,6 @@ $C$ affects $R$
 <small>
 [Gilmore, Adolph, & Tamis-LeMonda, 2019](https://www.rick-gilmore.com/post/behavior-is-the-linchpin/)
 </small>
-
----
-
-<a href="https://doi.org/10.1016/j.neuron.2016.12.041">
-<img src="img/krakauer.jpg" height=600px/>
-</a>
-
-<!-- Krakauer paper title -->
-
----
-
-<div class="centered">
-<img src="https://ars.els-cdn.com/content/image/1-s2.0-S0896627316310406-gr1.jpg" height=600px/>
-
-<small>
-[Krakauer et al. 2017](https://doi.org/10.1016/j.neuron.2016.12.041)
-</small>
-</div>
 
 ---
 
@@ -462,11 +456,23 @@ $C$ affects $R$
 <div class="notes">
 </div>
 
-# Making cognitive (neuro)science even better
+---
+
+- If we're not producing robust and readily reproducible knowledge about human behavior and thinking
+- What are we doing?
+
+# Making cognitive science even better
 
 ## Support research that
 
-- studies *behavior* (& accompanying internal states)
+- studies *behavior(s)*
+
+---
+
+<img src="img/powers-5.1.png" height=600px/>
+
+<small>[Powers 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
+</small>
 
 ---
 
@@ -476,12 +482,38 @@ $C$ affects $R$
 
 ---
 
-- attempts to close causal loops
-- specifies algorithms and/or dynamical processes
+- "Responses" include changes in (or maintenance of) body configurations AND autonomic/endocrine activity AND...
 
 ---
 
-- demonstrates a meaningful commitment to rigorous, reproducible, & robust findings
+<img src="https://i.ytimg.com/vi/kAy-03hIfck/maxresdefault.jpg" height=500px/>
+
+<!-- Bart Simpson homeostasis -->
+
+---
+
+<img src="https://www.teachengineering.org/content/nyu_/activities/nyu_homeostasis/nyu_homeostasis_activity1_image1.jpg" height=500px/>
+
+<!-- Multiple loops for thermoregulation -->
+
+## Support research that
+
+---
+
+- attempts to close causal loops
+- via specific algorithms and/or dynamical processes
+- informed by rich theories of task performance (inputs, controlled variables, outputs)
+
+---
+
+<img src="img/powers-6.1.png" height=800px/>
+
+<small>[Powers 1973](https://www.amazon.com/Behavior-Perception-William-T-Powers/dp/0964712172)
+</small>
+
+---
+
+- demonstrates a meaningful commitment to producing rigorous, reproducible, & robust findings
 
 ---
 
@@ -578,6 +610,8 @@ Python package
 <https://github.com/PLAY-behaviorome/databrarypi>
 
 ## Support research that
+
+---
 
 - enables linkages between & across data sets
 - exploits advances in AI and machine learning
