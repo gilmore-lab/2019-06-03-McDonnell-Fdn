@@ -80,7 +80,7 @@ logged_in <- databraryapi::login_db(params$db_id)
 
 - The hardest science
 - Why it's hard
-- Making cognitive (neuro)science even better
+- Making cognitive science even better
 
 # Psychology is the hardest science
 
@@ -169,7 +169,7 @@ $Stimulus (S) \rightarrow Response (R)$
 el1 <- rbind(c("W", "S"), c("S","R"))
 g1 <- igraph::graph_from_edgelist(el1)
 g1$layout <- igraph::layout_in_circle
-plot(g1, vertex.size=50, vertex.color="gray")
+plot(g1, vertex.size=50, vertex.color="gray", edge.color = "blue")
 ```
 
 ---
@@ -220,7 +220,7 @@ plot(g, vertex.size=80, vertex.color="gray", edge.color = "blue")
 
 Responses ($R$) affect the World ($W$)
 </br></br>
-$W$ states create stimuli ($S$)
+$W$ states evoke stimuli ($S$)
 </br></br>
 $S$ affect $C$ (cognition)
 </br></br>
@@ -228,7 +228,7 @@ $C$ affects $R$
 </br></br>
 (...repeat)
 
-## Even when $W$, $S$, $C$, and $R$ are completely known
+## but even when $W$, $S$, $C$, and $R$ are *completely* known
 
 ---
 
@@ -372,7 +372,7 @@ $C$ affects $R$
 
 ## To live is to move, sense, compute, adapt...
 
-## And yet big data (-omics) approaches to other questions in biomedicine largely overlook *behavior*
+## Yet big data (-omics) approaches to other questions in biomedicine largely overlook *behavior*
 
 ---
 
@@ -422,6 +422,18 @@ $C$ affects $R$
 
 <!-- Rigor Mortis book -->
 
+<!-- ## What proportion of findings in the published scientific literature (in the fields you care about) are *actually true*? -->
+
+<!-- --- -->
+
+<!-- - 100% -->
+<!-- - 90% -->
+<!-- - 70% -->
+<!-- - 50% -->
+<!-- - 30% -->
+
+<!-- ## How do we define what "*actually true*" means? -->
+
 ## Is there a reproducibility crisis in science?
 
 ---
@@ -458,12 +470,45 @@ $C$ affects $R$
 
 ---
 
-- If we're not producing robust and readily reproducible knowledge about human behavior and thinking
-- What are we doing?
+<div class="centered">
+<a href="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg">
+<img src="http://www.nature.com/polopoly_fs/7.36719.1464174488!/image/reproducibility-graphic-online4.jpg_gen/derivatives/landscape_630/reproducibility-graphic-online4.jpg" width=800px>
+</a>
+
+<small>[Baker 2016](http://doi.org/10.1038/533452a)</small>
+</div>
+
+<!-- Factors contributing to irreproducible research -->
+
+---
+
+<div class="centered">
+<a href="http://www.nature.com/articles/s41562-016-0021/figures/1">
+<img src="http://www.nature.com/article-assets/npg/nathumbehav/2017/s41562-016-0021/images_hires/w926/s41562-016-0021-f1.jpg" height=500px>
+</a>
+
+<small>[(Munafo et al. 2017)](http://doi.org/10.1038/s41562-016-0021)</small>
+</div>
+
+---
+
+<img src="https://www.rd.com/wp-content/uploads/2017/02/01-How-Bad-is-it-to-Share-a-Toothbrush-159311405-ABykov-760x506.jpg" height=600px/>
+
+---
+
+> "*...psychologists tend to treat other peoples’ theories like toothbrushes; no self-respecting individual wants to use anyone else’s.*"
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
+
+---
+
+> "*The toothbrush culture undermines the building of a genuinely cumulative science, encouraging more parallel play and solo game playing, rather than building on each other’s directly relevant best work.*"
+<small>[Mischel, 2009](https://www.psychologicalscience.org/observer/becoming-a-cumulative-science)</small>
 
 # Making cognitive science even better
 
 ## Support research that
+
+---
 
 - studies *behavior(s)*
 
@@ -478,11 +523,27 @@ $C$ affects $R$
 
 - samples densely (and/or broadly) in time & space
 - creates meaningful linkages across levels of analysis
+
+---
+
+<div class="centered">
+<img src="http://3.bp.blogspot.com/-3e_SbLI1Kbc/UkH085O8q5I/AAAAAAAACw4/lAZ_AJdzGss/s1600/bronfenbrenner.jpeg" height=500px>
+</div>
+
+---
+
 - connects between & among systems/domains
 
 ---
 
-- "Responses" include changes in (or maintenance of) body configurations AND autonomic/endocrine activity AND...
+<div class="centered">
+<img src="https://www.researchgate.net/profile/Carlo_Miniussi/publication/269877702/figure/fig2/AS:269128527249411@1441176649721/Hierarchical-modular-organisation-of-the-human-connectome-a-Hubs-regions-with-a.png" height=500px>
+</div>
+
+---
+
+- "Responses" include changes in (or maintenance of) body configurations 
+- AND autonomic/endocrine activity AND...
 
 ---
 
@@ -502,7 +563,11 @@ $C$ affects $R$
 
 - attempts to close causal loops
 - via specific algorithms and/or dynamical processes
+
+---
+
 - informed by rich theories of task performance (inputs, controlled variables, outputs)
+- resists "premature simplification"
 
 ---
 
@@ -539,7 +604,7 @@ $C$ affects $R$
 
 ---
 
-<video width="700" data-autoplay>
+<video height="600" data-autoplay>
   <source src="https://nyu.databrary.org/slot/27087/0,79000/asset/119877/download?inline=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
@@ -551,6 +616,8 @@ $n=900$ 12-, 18-, 24-mo-olds; $n=30$ sites
 demographics, health, vocabulary, media use, & temperament
 </br></br>
 openly shared with the research community
+</br></br>
+[play-project.org](https://www.play-project.org)
 
 ---
 
@@ -624,6 +691,14 @@ Your browser does not support the video tag.
 </video>
 
 <small>Source: Ori Ossmy, NYU</small>
+
+---
+
+<img src="img/ossmy-gilmore-adolph-2019-fig-02.png" height=600px/>
+
+<small>
+[Ossmy, Gilmore, & Adolph 2019](https://doi.org/10.1007/978-3-030-17798-0_14)
+</small>
 
 ## If we do these things...
 
