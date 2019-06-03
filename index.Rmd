@@ -87,7 +87,7 @@ I want to thank NSF, NIH, the Alfred P. Sloan Foundation, SRCD, the LEGO Foundat
 <!-- I founded Penn State's imaging center, and I am the co-founder and co-director of Databrary. -->
 
 <div class="notes">
-This is a brief bio in photos that I will skip over in the interests of time.
+This is a brief bio in photos. As brief background, I grew up in Denver, studied cognitive science at Brown, worked in non-profit management in DC before completing my Ph.D. in developmental cognitive neuroscience at Carnegie Mellon. That's where I met Karen Adolph. I moved to Penn State after finishing my degree. In addition to building my own line of work in visual development and neuroscience, I founded Penn State's imaging center, and I am the co-founder and co-director of Databrary.
 </div>
 
 ## Overview
@@ -650,7 +650,7 @@ For example, other areas of biomedicine have taken 'big data' approaches to reve
 
 Of course I refer to the genome, proteome, metabolome, and connectome projects.
 
-Curiously, these approaches largely overlook one of the principle outputs of all of this machinery: behavior.
+Curiously, these approaches largely overlook one of the principal outputs of all of this machinery: *behavior*.
 </div>
 
 ---
@@ -728,20 +728,6 @@ But there is an additional challenge that all sciences face: The challenge of pr
 
 Richard Harris' book, Rigor Mortis, exposes some shocking problems with reproducibility in biomedical research, and I urge you to read it.
 </div>
-
-<!-- Rigor Mortis book -->
-
-<!-- ## What proportion of findings in the published scientific literature (in the fields you care about) are *actually true*? -->
-
-<!-- --- -->
-
-<!-- - 100% -->
-<!-- - 90% -->
-<!-- - 70% -->
-<!-- - 50% -->
-<!-- - 30% -->
-
-<!-- ## How do we define what "*actually true*" means? -->
 
 ## Is there a reproducibility crisis in science?
 
@@ -824,10 +810,10 @@ We won't dwell on the factors that respondents said contribute to these problems
 
 <div class="centered">
 <a href="http://www.nature.com/articles/s41562-016-0021/figures/1">
-<img src="http://www.nature.com/article-assets/npg/nathumbehav/2017/s41562-016-0021/images_hires/w926/s41562-016-0021-f1.jpg" height=500px>
+<img src="https://media.nature.com/lw926/nature-assets/nathumbehav/2017/s41562-016-0021/images_hires/s41562-016-0021-f1.jpg" height=500px>
 </a>
 
-<small>[(Munafo et al. 2017)](http://doi.org/10.1038/s41562-016-0021)</small>
+<small>[Munafo et al. 2017](http://doi.org/10.1038/s41562-016-0021)</small>
 </div>
 
 <div class="notes">
@@ -925,8 +911,9 @@ And network theory is a tool that will help cognitive scientists characterize th
 
 ---
 
-- "Responses" include changes in (or maintenance of) body configurations 
-- AND autonomic/endocrine activity AND...
+- "Responses" include behaviors
+- AND autonomic/endocrine activity
+- AND...
 
 <div class="notes">
 I also suggest that the range of behaviors or responses studied be broadened to include not only changes in or the active maintenance of body configurations but also heart rate, respiration, and other autonomic 'behaviors' and endocrine/hormonal activity.
@@ -1003,7 +990,7 @@ The challenge is knowing when it's safe to simplify and when it's not.
 This figure from Bill Powers again shows a later, more complex version of the same visual object tracking task.
 Here the more complicated model explains more aspects of behavior.
 
-I suggest that cognitive science can should probably complicate before we simplify.
+I suggest that cognitive science can and should probably complicate before we simplify.
 </div>
 
 ---
@@ -1214,6 +1201,8 @@ Linda Smith and Chen Yu have been pursuing similar efforts in their own work.
 
 <div class="notes">
 In our work with Ori Ossmy, we've shown that computer vision techniques can be 100 times faster than human coders and with similar levels of precision.
+
+The human cost of video annotation is one of the biggest barriers to its widespread use, and so the potential to reduce these substantially is tremedously exciting.
 </div>
 
 ## If we do these things...
