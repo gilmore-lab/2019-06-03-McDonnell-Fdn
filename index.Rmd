@@ -875,7 +875,7 @@ Bill Powers work on perceptual control theory seems to have left little mark on 
 
 It shows how one might decompose a simple object tracking task into a series of perception/computation/action loops.
 
-We could and should have rich descriptions of and theories about behaviors.
+This particular model may or may not be the right one. But we could and should have much richer descriptions of and theories about behaviors that can be rigorously tested.
 </div>
 
 ---
@@ -906,7 +906,7 @@ As this figure from Bronfenbrenner depicts, psychologists, especially those with
 <div class="notes">
 In neuroscience, the tools of network theory have come to play important roles in inference.
 
-And network theory is a tool that will help cognitive scientists characterize the networks of factors that influence human computation.
+And network theory is a powerful tool that will help cognitive scientists characterize the networks of factors that influence human computation.
 </div>
 
 ---
@@ -919,15 +919,15 @@ And network theory is a tool that will help cognitive scientists characterize th
 I also suggest that the range of behaviors or responses studied be broadened to include not only changes in or the active maintenance of body configurations but also heart rate, respiration, and other autonomic 'behaviors' and endocrine/hormonal activity.
 </div>
 
----
+<!-- --- -->
 
-<img src="https://i.ytimg.com/vi/kAy-03hIfck/maxresdefault.jpg" height=500px/>
+<!-- <img src="https://i.ytimg.com/vi/kAy-03hIfck/maxresdefault.jpg" height=500px/> -->
 
-<!-- Bart Simpson homeostasis -->
+<!-- <!-- Bart Simpson homeostasis --> -->
 
-<div class="notes">
-This Simpson's cartoon depicts the classic model system for studying homeostasis, temperature regulation.
-</div>
+<!-- <div class="notes"> -->
+<!-- This Simpson's cartoon depicts the classic model system for studying homeostasis, temperature regulation. -->
+<!-- </div> -->
 
 ---
 
@@ -950,12 +950,21 @@ I suggest that we augment support for research that...
 
 ---
 
+- is informed by rich theories of task performance (inputs, controlled variables, outputs)
 - attempts to close causal loops
-- via specific algorithms and/or dynamical processes
 
 ---
 
-- informed by rich theories of task performance (inputs, controlled variables, outputs)
+<img src="https://killerbooks.org/wp-content/uploads/2019/02/TheBookofWhy-850x1269.jpg" height=600/>
+
+<div class="notes">
+Psychologists seem to shun discussions of causality.
+
+But there has been lively and active progress in developing ways to test causal relationship statistically. And progress would be accelerated if we were comfortable put our necks out to specify and test causal models.
+</div>
+
+---
+
 - resists "premature simplification"
 
 <div class="notes">
@@ -1046,6 +1055,24 @@ For starters, my colleagues and I have argued that the more widespread use of vi
 - Shows (& helps tell...)
 - Expands the scope of inquiry
 - Provides unequaled opportunities for reuse
+
+---
+
+<video height="600" data-autoplay>
+  <source src="https://nyu.databrary.org/slot/7578/38981,859973/asset/15922/download?inline=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+[Jayaraman, Smith, Raudies, & Gilmore 2014](http://doi.org/10.17910/B7988V)
+
+---
+
+<video height="600" data-autoplay>
+  <source src="https://nyu.databrary.org/slot/11680/25500,50000/asset/41873/download?inline=true" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+[Jayaraman, Smith, Raudies, & Gilmore 2014](http://doi.org/10.17910/B7988V)
 
 ---
 
