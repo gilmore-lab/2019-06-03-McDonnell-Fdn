@@ -587,21 +587,20 @@ There are other important facets of biological computing.
 
 - Engages in real-time behaviors with existential consequences (e.g., ingestion, defense, reproduction, locomotion, pursuit)
 - Operates effectively in complex, dynamic environments
-- Operates in single cells to aggregates of quadrillions...
 
-<div class="notes">
-It [READ slide]
-</div>
+<!-- <div class="notes"> -->
+<!-- It [READ slide] -->
+<!-- </div> -->
 
----
+<!-- --- -->
 
-<iframe width="800" height="600" src="https://www.youtube.com/embed/9nxoSRasq2Q" frameborder="0" allow="accelerometer; data-autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <iframe width="800" height="600" src="https://www.youtube.com/embed/9nxoSRasq2Q" frameborder="0" allow="accelerometer; data-autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
-<div class="notes">
-This video shows a species of algae, *Euglena*, locomoting through the environment with the help of a whip-like flagellum.
+<!-- <div class="notes"> -->
+<!-- This video shows a species of algae, *Euglena*, locomoting through the environment with the help of a whip-like flagellum. -->
 
-If we count sensation, locomotion, decision-making, adaptation as part of the cognitive apparatus, then even single celled organisms seem to carry out these operations in some form.
-</div>
+<!-- If we count sensation, locomotion, decision-making, adaptation as part of the cognitive apparatus, then even single celled organisms seem to carry out these operations in some form. -->
+<!-- </div> -->
 
 <!-- Video of Euglena in locomotion -->
 
@@ -625,32 +624,28 @@ If we count sensation, locomotion, decision-making, adaptation as part of the co
 
 <!-- ## Bigger, denser, more diverse data will help, but -->
 
-<!-- ## Big data (-omics) initiatives in the biological sciences... -->
+## Big data (-omics) initiatives in the biological sciences...
 
-<!-- --- -->
+---
 
-<!-- - [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/) -->
-<!-- - [Proteome](https://hupo.org/human-proteome-project) -->
-<!-- - [Metabolome](http://www.hmdb.ca/) -->
-<!-- - [Connectome](http://www.humanconnectomeproject.org/) -->
+- [Genome](https://www.genome.gov/12011238/an-overview-of-the-human-genome-project/)
+- [Proteome](https://hupo.org/human-proteome-project)
+- [Metabolome](http://www.hmdb.ca/)
+- [Connectome](http://www.humanconnectomeproject.org/)
 
-## To live is to move, sense, compute, adapt...
+<!-- ## To live is to move, sense, compute, adapt... -->
 
-<div class="notes">
-Indeed, we can rightly say that moving, sensing, computing, adapting are fundamental properties of life.
+<!-- <div class="notes"> -->
+<!-- Indeed, we can rightly say that moving, sensing, computing, adapting are fundamental properties of life. -->
 
-Now, I'm not suggesting that biological computing in single-celled organisms is identical to that of multicellular organisms or that these processes should be called 'cognition'.
-But I am saying that we might gain some insight into human cognition by asking what parts of this elephant we're ignoring.
-</div>
+<!-- Now, I'm not suggesting that biological computing in single-celled organisms is identical to that of multicellular organisms or that these processes should be called 'cognition'. -->
+<!-- But I am saying that we might gain some insight into human cognition by asking what parts of this elephant we're ignoring. -->
+<!-- </div> -->
 
-## Big data (-omics) approaches to other questions in biomedicine largely overlook *behavior*
+## ...largely overlook *behavior*
 
 <div class="notes">
 For example, other areas of biomedicine have taken 'big data' approaches to revealing the structure at different levels of spatial and temporal resoulution.
-
-Of course I refer to the genome, proteome, metabolome, and connectome projects.
-
-Curiously, these approaches largely overlook one of the principal outputs of all of this machinery: *behavior*.
 </div>
 
 ---
@@ -909,39 +904,6 @@ In neuroscience, the tools of network theory have come to play important roles i
 And network theory is a powerful tool that will help cognitive scientists characterize the networks of factors that influence human computation.
 </div>
 
----
-
-- "Responses" include behaviors
-- AND autonomic/endocrine activity
-- AND...
-
-<div class="notes">
-I also suggest that the range of behaviors or responses studied be broadened to include not only changes in or the active maintenance of body configurations but also heart rate, respiration, and other autonomic 'behaviors' and endocrine/hormonal activity.
-</div>
-
-<!-- --- -->
-
-<!-- <img src="https://i.ytimg.com/vi/kAy-03hIfck/maxresdefault.jpg" height=500px/> -->
-
-<!-- <!-- Bart Simpson homeostasis --> -->
-
-<!-- <div class="notes"> -->
-<!-- This Simpson's cartoon depicts the classic model system for studying homeostasis, temperature regulation. -->
-<!-- </div> -->
-
----
-
-<img src="https://www.teachengineering.org/content/nyu_/activities/nyu_homeostasis/nyu_homeostasis_activity1_image1.jpg" height=500px/>
-
-<!-- Multiple loops for thermoregulation -->
-
-<div class="notes">
-Thermoregulation is a useful system for depicting negative feedback systems and multiple perceptual/action systems.
-
-But it's likely that many other behavioral systems can be understood in similar terms.
-Indeed, one insight from control theory and cybernetics is that if some variable is stable across time or space, it's subject to some form of control.
-</div>
-
 ## Support research that
 
 <div class="notes">
@@ -1063,7 +1025,10 @@ For starters, my colleagues and I have argued that the more widespread use of vi
 Your browser does not support the video tag.
 </video>
 
+<small>
 [Jayaraman, Smith, Raudies, & Gilmore 2014](http://doi.org/10.17910/B7988V)
+</small>
+
 
 ---
 
@@ -1072,7 +1037,9 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 </video>
 
+<small>
 [Jayaraman, Smith, Raudies, & Gilmore 2014](http://doi.org/10.17910/B7988V)
+</small>
 
 ---
 
@@ -1274,6 +1241,17 @@ rogilmore@psu.edu</br>
 </small>
 
 # Materials
+
+---
+
+```{r qr-code, echo=FALSE, warning=FALSE, message=FALSE}
+if (!require(qrcode)) {
+  install.packages('qrcode')
+}
+talk_url <- 'https://gilmore-lab.github.io/2019-03-22-SRCD-conversation/'
+library(qrcode)
+qrcode::qrcode_gen(talk_url)
+```
 
 ---
 
